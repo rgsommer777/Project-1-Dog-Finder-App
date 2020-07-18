@@ -1,1 +1,1 @@
-# Project-1: Dog Finder App
+# Project 1: Dog Finder App
