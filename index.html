@@ -11,15 +11,181 @@
     <!-- CDN for Compressed Foundation JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<h2>Dog Finder App (working title)</h2>
-<header>
-  
-
-</header>
-
 <body>
+
+
+    <header>
+      <!-- Sub Navigation -->
+      <div class="top-bar">
+        <img src="https://placehold.it/200x100&text=DOG FINDER BANNER LOGO" alt="Dog Finder Logo">
+        <div class="top-bar-left">
+          <!-- NAV MENU OPTIONS  
+          <ul class="menu">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+            <li><a href="#">Four</a></li>
+          </ul> -->
+        </div>
+        <!-- SEARCH BUTTON / ZIP CODE IN TOP BAR
+         <div class="top-bar-right">
+          <ul class="menu">
+            <h5>Enter Your Zip Code</h5>
+            <li><input type="number" placeholder="Zip Code"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div> -->
+      </div>
+      
     
-</body>
-</html>
+      <!-- PLACEHOLDER SITE TEXT (E.G EXPLAIN PURPOSE, HOW TO USE SITE, ETC.  -->
+      <div class="row">
+        <div class="medium-6 columns">
+         <h7>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorum unde rem, animi esse dolores temporibus totam quia.</h7>
+        </div>
+        <div class="medium-4 columns">
+          <h7>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h7>
+        </div>
+      </div>
+      <!-- RESPONSIVE MENU TOGGLE - "SEARCH OPTIONS" - -->
+    
+      <br>
+    
+      <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Seach Options</div>
+      </div>
+    
+      <div class="top-bar" id="main-menu">
+        <form data-abide novalidate>
+          <div data-abide-error class="alert callout" style="display: none;">
+            <p><i class="fi-alert"></i> There are some errors in your form.</p>
+          </div>
+          
+          <div class="row">
+            <!-- <div class="grid-x grid-margin-x"> -->
+              <div class="medium-4 cell">
+                <label>Zip Code (Required)
+                  <input type="text" id = "zipCode" placeholder="" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="number">
+                  <span class="form-error">
+                    Please enter a valid 5-digit zip code.
+                  </span>
+                </label>
+              <p class="help-text" id="example1Hint1">Enter zip code to find dogs in your area</p>
+              </div>
+              
+              <!-- <div class="small-4 cell"> -->
+                <legend>Male / Female</legend>
+                <input id="checkboxMale" type="checkbox"><label for="checkbox1">Male</label>
+                <input id="checkboxFemale" type="checkbox"><label for="checkbox2">Female</label>
+                 <!-- <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label> -->
+              <!-- </div> -->
+            
+              <div class="medium-12 cell">
+                <label>Choose Dog Breed.
+                  <select id="selectBreed" required>
+                    <option value=""></option>
+                    <option value="German Shepherd">German Shepherd</option>
+                    <option value="Husky">Husky</option>
+                    <option value="Pekingese">Pekingese</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                  </select>
+                </label>
+              </div>
+              
+            <fieldset class="medium-4 cell">
+                <button class="button" type="submit" value="Submit">Search</button>
+              <!-- </fieldset> -->
+              <!-- <fieldset class="small-4 medium-4 cell"> -->
+                <button class="button" type="reset" value="Reset">Reset Form (for testing only)</button>
+            </fieldset>
+                 </div>
+            </div>
+          </div>
+          
+          <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+            </div>
+          </div>
+           <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+              
+            </div>
+          </div>
+        </form>
+      </div>
+    
+    </header>
+    
+    
+    
+    <div class="row column">
+      <h4 style="margin: 0;" class="text-center"></h4>
+    </div>
+    
+    <hr>
+    
+    <div class="row">
+      <div class="large-12 columns" style="border-right: 1px solid #E3E5E8;">
+    
+      <return>
+    <!-- INDIVIDUAL DOG INFO ROW INCLUDING IMAGE AND HEADLINE  -->
+        <div class="row" id="dogListItem">
+          <div class="medium-6 columns">
+            <p><img id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
+          </div>
+          <div class="large-12 columns">
+            <h5><a id="dogHeadline"></a></h5>
+            </p>
+            <hr>
+              <!-- <p><a href ="#dogInfo"></a>Dog additional Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p> -->
+          </div>
+        </div>
+    <!-- PAGINATION FEATURE -->
+        <!-- <ul class="pagination" role="navigation" aria-label="Pagination">
+          <li class="disabled">Previous <span class="show-for-sr">page</span></li>
+          <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+          <li><a href="#" aria-label="Page 2">2</a></li>
+          <li><a href="#" aria-label="Page 3">3</a></li>
+          <li><a href="#" aria-label="Page 4">4</a></li>
+          <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+        </ul> -->
+    
+        </article>
+    
+      </div>
+    
+      <!-- <div class="large-4 columns">
+    
+      </div> -->
+    </div>
+    
+    <footer>
+      
+        <!-- <div class="medium-6 columns">
+          <ul class="menu align-right">
+            <li class="menu-text">Copyright © 2020 Loyal Giraffes</li>
+          </ul>
+        </div> -->
+      </div>
+    
+    </footer>
+    
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+        <script>
+          $(document).foundation();
+        </script>
+    <!-- SAMPLE JSCRIPT ENTRIES TO TEST JQUERY DOM MANIPULATION   -->
+        <script>
+          $("#dogImage").attr("src","https://placehold.it/80x80&text=Dog Pic");
+          $("#dogHeadline").text("Dog #1 headline text (e.g. Name, other high level info)");
+          $("#zipCode").attr("placeholder","ex: 30000");
+          
+    
+        </script>
+    
+    </body>
+    </html>
