@@ -17,42 +17,26 @@
 <body>
 
 
-    <header>
+ <header>
       <!-- Sub Navigation -->
       <div class="top-bar">
         <img src="https://placehold.it/200x100&text=DOG FINDER BANNER LOGO" alt="Dog Finder Logo">
         <div class="top-bar-left">
-          <!-- NAV MENU OPTIONS  
-          <ul class="menu">
-            <li><a href="#">One</a></li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-            <li><a href="#">Four</a></li>
-          </ul> -->
         </div>
-        <!-- SEARCH BUTTON / ZIP CODE IN TOP BAR
-         <div class="top-bar-right">
-          <ul class="menu">
-            <h5>Enter Your Zip Code</h5>
-            <li><input type="number" placeholder="Zip Code"></li>
-            <li><button type="button" class="button">Search</button></li>
-          </ul>
-        </div> -->
       </div>
       
-    
       <!-- PLACEHOLDER SITE TEXT (E.G EXPLAIN PURPOSE, HOW TO USE SITE, ETC.  -->
-      <div class="grid-x grid-margin-x">
+      <!-- <div class="grid-x grid-margin-x">
         <div class= "small-1 medium-3 large-6 cell" id = "Lorem1">
          <h7>Sit amet consectetur adipisicing elit. Eligendi dolorum unde rem, animi esse dolores temporibus totam quia.</h7>
         </div>
         <div class="small-1 medium-3 large-6 cell"medium-4 cell" id = "Lorem2">
           <h7>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h7>
         </div>
-      </div>
+      </div> -->
       <!-- RESPONSIVE MENU TOGGLE - "SEARCH OPTIONS" - -->
     
-      <br>
+      <!-- <br> -->
     
       <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle></button>
@@ -65,85 +49,60 @@
             <p><i class="fi-alert"></i> There are some errors in your form.</p>
           </div>
           
-          <div class="grid-x">
+      <!-- <div class="grid-container-fluid"> -->
+      <form>  
+        
+      <div class="grid-x grid-margin-x">
             <!-- <div class="grid-x grid-margin-x"> -->
-              <div class="medium-4 cell">
-                <label>Zip Code (Required)
-                  <input type="text" id = "zipCode" placeholder="" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="number">
-                  <span class="form-error">
+          <div class="small-12 medium-8 large-6 cell">
+            <label>Zip Code (Required)
+              <input type="text" id = "zipCode" placeholder="" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="number">
+              <span class="form-error">
                     Please enter a valid 5-digit zip code.
-                  </span>
-                </label>
+              </span>
+            </label>
               <p class="help-text" id="example1Hint1">Enter zip code to find dogs in your area</p>
-              </div>
-              
-              <!-- <div class="small-4 cell"> -->
-                <legend>Male / Female</legend>
-                <input id="checkboxMale" type="checkbox"><label for="checkbox1">Male</label>
-                <input id="checkboxFemale" type="checkbox"><label for="checkbox2">Female</label>
-                 <!-- <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label> -->
-              <!-- </div> -->
+          </div>
+
+      <fieldset class="small-12 medium-4 large-6 cell"></fieldset><!-- <div class="medium-4 cell"> -->
+        <div class="large-8 cell">
+            <legend>Male / Female</legend>
+              <input id="checkboxMale" type="checkbox"><label for="checkbox1">Male</label>
+              <input id="checkboxFemale" type="checkbox"><label for="checkbox2">Female</label>
             
-              <!-- <div class="medium-12 cell">
-                <label>Choose Dog Breed.
-                  <select id="selectBreed" required>
-                    <option value=""></option>
-                    <option value="German Shepherd">German Shepherd</option>
-                    <option value="Husky">Husky</option>
-                    <option value="Pekingese">Pekingese</option>
-                    <option value="Chihuahua">Chihuahua</option>
-                  </select>
-                </label>
-              </div> -->
-              
-            <fieldset class="medium-4 cell">
-                <button class="button" type="submit" value="Submit">Search</button>
-              <!-- </fieldset> -->
-              <!-- <fieldset class="small-4 medium-4 cell"> -->
-                <button class="button" type="reset" value="Reset">Reset Form (for testing only)</button>
-            </fieldset>
-                 </div>
+      <fieldset class="small-12 medium-4 large-6 cell"></fieldset>      
+              <legend>Size</legend>
+              <a class="button small" href="#smDog">Small</a>
+              <a class="button small" href="#medDog">Medium</a>
+              <a class="button small" href="#lgDog">Large</a>
+      <fieldset class="small-12 medium-4 large-6 cell"></fieldset>
+              <legend>Age</legend>
+              <a class="button small" href="#puppy">Puppy</a>
+              <a class="button small" href="#young">Young</a>
+              <a class="button small" href="#adult">Adult</a>
+              <a class="button small" href="#senior">Senior</a>
+            
+            <div>
+              <button class="button" id="searchBtn" type="submit" value="Submit">Search</button>
+         
+              <button class="button" id="resetBtn" type="reset" value="Reset">Reset Form (for testing only)</button>
             </div>
-          </div>
-          
-          <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-            </div>
-          </div>
-           <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-              
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
+ 
     
-    </header>
-    
-    
-    
-    <div class="row column">
-      <h4 style="margin: 0;" class="text-center"></h4>
-    </div>
-    
-    <hr>
-    
-    <div class="grid-x">
-      <div class="large-12 cell" style="border-right: 1px solid #E3E5E8;">
-    
-      <return>
     <!-- INDIVIDUAL DOG INFO ROW INCLUDING IMAGE AND HEADLINE  -->
-        <div class="grid-x" id="dogListItem">
-          <div class="medium-2 cell">
+        <div id="dogListItem" class="grid-x grid-margin-x">
+          <div class="small-2 medium-2 large-12 cell">
             <p><img id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
           </div>
-          <div class="medium-8 columns">
+          <div class="medium-10 cell">
             <h5><a id="dogHeadline"></a></h5>
             </p>
             <!-- <p><a href ="#dogInfo"></a>Dog additional Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p> -->
           </div>
         </div>
-    <!-- PAGINATION FEATURE -->
+    <!-- POSSIBLE PAGINATION FEATURE -->
         <!-- <ul class="pagination" role="navigation" aria-label="Pagination">
           <li class="disabled">Previous <span class="show-for-sr">page</span></li>
           <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
@@ -152,24 +111,9 @@
           <li><a href="#" aria-label="Page 4">4</a></li>
           <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
         </ul> -->
-    
-        </article>
-    
-      </div>
-    
-      <!-- <div class="large-4 columns">
-    
-      </div> -->
-    </div>
-    
+
     <footer>
-      
-        <!-- <div class="medium-6 columns">
-          <ul class="menu align-right">
-            <li class="menu-text">Copyright © 2020 Loyal Giraffes</li>
-          </ul>
-        </div> -->
-      </div>
+   
     
     </footer>
     
@@ -179,12 +123,11 @@
           $(document).foundation();
         </script>
     <!-- SAMPLE JSCRIPT ENTRIES TO TEST JQUERY DOM MANIPULATION   -->
+    <!-- COMMENT OUT WHEN LINKING TO PROJECT SCRIPT.JS -->
         <script>
           $("#dogImage").attr("src","https://placehold.it/80x80&text=Dog Pic");
-          $("#dogHeadline").text("Dog #1 headline text (e.g. Name, other high level info)");
+          $("#dogHeadline").text("Dog headline text (e.g. Name, other high level info)");
           $("#zipCode").attr("placeholder","ex: 30000");
-          
-    
         </script>
     
     </body>
