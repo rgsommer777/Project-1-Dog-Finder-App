@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dog Finder App</title>
     <!-- CDN for Compressed Foundation Framework CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-index.css">
     <!-- CDN for Minified jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- CDN for Compressed Foundation JavaScript -->
@@ -16,134 +17,102 @@
 <body>
 
 
-    <header>
-      <!-- Sub Navigation -->
-      <div class="top-bar">
-        <img src="https://placehold.it/200x100&text=DOG FINDER BANNER LOGO" alt="Dog Finder Logo">
-        <div class="top-bar-left">
-          <!-- NAV MENU OPTIONS  
-          <ul class="menu">
-            <li><a href="#">One</a></li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-            <li><a href="#">Four</a></li>
-          </ul> -->
-        </div>
-        <!-- SEARCH BUTTON / ZIP CODE IN TOP BAR
-         <div class="top-bar-right">
-          <ul class="menu">
-            <h5>Enter Your Zip Code</h5>
-            <li><input type="number" placeholder="Zip Code"></li>
-            <li><button type="button" class="button">Search</button></li>
-          </ul>
-        </div> -->
-      </div>
+ <!-- <header>
+      Sub Navigation -->
       
+      <div class="top-bar">
+  <img src=".\assets\Logo\Logo2.png" alt="Dog Finder Logo">        
+        <div class="top-bar-left">
+        </div>
+      </div>
+ </header>
     
       <!-- PLACEHOLDER SITE TEXT (E.G EXPLAIN PURPOSE, HOW TO USE SITE, ETC.  -->
-      <div class="row">
-        <div class="medium-6 columns">
-         <h7>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorum unde rem, animi esse dolores temporibus totam quia.</h7>
+      <!-- <div class="grid-x grid-margin-x">
+        <div class= "small-1 medium-3 large-6 cell" id = "Lorem1">
+         <h7>Sit amet consectetur adipisicing elit. Eligendi dolorum unde rem, animi esse dolores temporibus totam quia.</h7>
         </div>
-        <div class="medium-4 columns">
+        <div class="small-1 medium-3 large-6 cell"medium-4 cell" id = "Lorem2">
           <h7>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h7>
         </div>
-      </div>
+      </div> -->
       <!-- RESPONSIVE MENU TOGGLE - "SEARCH OPTIONS" - -->
     
-      <br>
+      <!-- <br> -->
     
-      <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+      <div class="title-bar" data-responsive-toggle="search-options" data-hide-for="small">
         <button class="menu-icon" type="button" data-toggle></button>
         <div class="title-bar-title">Seach Options</div>
       </div>
-    
-      <div class="top-bar" id="main-menu">
-        <form data-abide novalidate>
+      <form>   
+      <div class="grid-container" id="search-options">
+        <div class="grid-y">
+        <div class="small-12 medium-6 large-6 cell"></div>
+          <form data-abide novalidate>
           <div data-abide-error class="alert callout" style="display: none;">
             <p><i class="fi-alert"></i> There are some errors in your form.</p>
           </div>
-          
-          <div class="row">
+        </div>
+      
+      <!-- <div class="grid-container-fluid"> -->
+       
+        
+      <div class="grid-x grid-margin-x">
             <!-- <div class="grid-x grid-margin-x"> -->
-              <div class="medium-4 cell">
-                <label>Zip Code (Required)
-                  <input type="text" id = "zipCode" placeholder="" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="number">
-                  <span class="form-error">
+          <div class="small-8 medium-8 large-8 cell">
+            <label>Zip Code (Required)
+              <input type="text" id = "zipCode" placeholder="" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="number">
+              <span class="form-error">
                     Please enter a valid 5-digit zip code.
-                  </span>
-                </label>
+              </span>
+            </label>
               <p class="help-text" id="example1Hint1">Enter zip code to find dogs in your area</p>
-              </div>
-              
-              <!-- <div class="small-4 cell"> -->
-                <legend>Male / Female</legend>
-                <input id="checkboxMale" type="checkbox"><label for="checkbox1">Male</label>
-                <input id="checkboxFemale" type="checkbox"><label for="checkbox2">Female</label>
-                 <!-- <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label> -->
-              <!-- </div> -->
-            
-              <div class="medium-12 cell">
-                <label>Choose Dog Breed.
-                  <select id="selectBreed" required>
-                    <option value=""></option>
-                    <option value="German Shepherd">German Shepherd</option>
-                    <option value="Husky">Husky</option>
-                    <option value="Pekingese">Pekingese</option>
-                    <option value="Chihuahua">Chihuahua</option>
-                  </select>
-                </label>
-              </div>
-              
-            <fieldset class="medium-4 cell">
-                <button class="button" type="submit" value="Submit">Search</button>
-              <!-- </fieldset> -->
-              <!-- <fieldset class="small-4 medium-4 cell"> -->
-                <button class="button" type="reset" value="Reset">Reset Form (for testing only)</button>
-            </fieldset>
-                 </div>
-            </div>
-          </div>
           
-          <div class="grid-container">
-            <div class="grid-x grid-margin-x">
+
+      <fieldset class="small-12 medium-6 large-8 cell"></fieldset><!-- <div class="medium-4 cell"> -->
+       
+            <legend>Male / Female</legend>
+              <input id="checkboxMale" type="checkbox"><label for="checkbox1">Male</label>
+              <input id="checkboxFemale" type="checkbox"><label for="checkbox2">Female</label>
+            
+     
+      <fieldset class="large-12 cell" id=sizeSelector>
+        <legend>Size</legend>
+        <input type="radio" name="size" value="small" id= "smDog" required><label for="smDog">Small</label>
+        <input type="radio" name="size" value="medium" id="medDog"><label for="medDog">Medium</label>
+        <input type="radio" name="size" value="large" id="lgDog"><label for="lgDog">Large</label>
+      </fieldset>        
+      
+      <fieldset class="large-12 cell" id=ageSelector>
+        <legend>Age</legend>
+        <input type="radio" name="age" value="baby" id= "puppy" required><label for="puppy">Puppy</label>
+        <input type="radio" name="age" value="young" id="young"><label for="medium">Young</label>
+        <input type="radio" name="age" value="adult" id="adult"><label for="large">Adult</label>
+        <input type="radio" name="age" value="senior" id="senior"><label for="senior">Senior</label>
+      </fieldset>        
+            
+            <div>
+              <button class="button" id="searchBtn" type="submit" value="Submit">Search</button>
             </div>
-          </div>
-           <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-              
+              <button class="button" id="resetBtn" type="reset" value="Reset">Reset Form (for testing only)</button>
             </div>
-          </div>
-        </form>
-      </div>
-    
-    </header>
-    
-    
-    
-    <div class="row column">
-      <h4 style="margin: 0;" class="text-center"></h4>
-    </div>
-    
-    <hr>
-    
-    <div class="row">
-      <div class="large-12 columns" style="border-right: 1px solid #E3E5E8;">
-    
-      <return>
+        </div>
+      
+ </form>
+ </div>  
+  <br>
     <!-- INDIVIDUAL DOG INFO ROW INCLUDING IMAGE AND HEADLINE  -->
-        <div class="row" id="dogListItem">
-          <div class="medium-6 columns">
+        <div id="dogListItem" class="grid-x grid-margin-x">
+          <div class="small-2 medium-2 large-12 cell">
             <p><img id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
           </div>
-          <div class="large-12 columns">
+          <div class="medium-10 cell">
             <h5><a id="dogHeadline"></a></h5>
             </p>
-            <hr>
-              <!-- <p><a href ="#dogInfo"></a>Dog additional Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p> -->
+            <!-- <p><a href ="#dogInfo"></a>Dog additional Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p> -->
           </div>
         </div>
-    <!-- PAGINATION FEATURE -->
+    <!-- POSSIBLE PAGINATION FEATURE -->
         <!-- <ul class="pagination" role="navigation" aria-label="Pagination">
           <li class="disabled">Previous <span class="show-for-sr">page</span></li>
           <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
@@ -152,24 +121,9 @@
           <li><a href="#" aria-label="Page 4">4</a></li>
           <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
         </ul> -->
-    
-        </article>
-    
-      </div>
-    
-      <!-- <div class="large-4 columns">
-    
-      </div> -->
-    </div>
-    
+
     <footer>
-      
-        <!-- <div class="medium-6 columns">
-          <ul class="menu align-right">
-            <li class="menu-text">Copyright © 2020 Loyal Giraffes</li>
-          </ul>
-        </div> -->
-      </div>
+   
     
     </footer>
     
@@ -179,12 +133,14 @@
           $(document).foundation();
         </script>
     <!-- SAMPLE JSCRIPT ENTRIES TO TEST JQUERY DOM MANIPULATION   -->
+    <!-- COMMENT OUT WHEN LINKING TO PROJECT SCRIPT.JS -->
         <script>
           $("#dogImage").attr("src","https://placehold.it/80x80&text=Dog Pic");
-          $("#dogHeadline").text("Dog #1 headline text (e.g. Name, other high level info)");
+          $("#dogHeadline").text("Dog headline text (e.g. Name, other high level info)");
           $("#zipCode").attr("placeholder","ex: 30000");
+        
           
-    
+
         </script>
     
     </body>
