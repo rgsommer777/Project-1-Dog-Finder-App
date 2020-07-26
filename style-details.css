@@ -37,22 +37,22 @@ body {
     border: dashed 1px rgb(246, 105, 11);
     
     background-color: rgba(235, 238, 243, 0.8);
-    margin:1em 2em;
-    padding: 1em 0em 0em 1em; 
+    /* margin:1em 2em;
+    padding: 1em 0em 0em 1em;  */
 }
 .dogContainer{
     border: dashed 1px rgb(160, 214, 73);
     
     background-color: rgba(151, 187, 243, 0.8);
-    margin:1em 2em;
-    padding: 1em 0em 0em 1em; 
+    /* margin:1em 2em;
+    padding: 1em 0em 0em 1em;  */
 }
 .shelterContainer{
     border: dashed 1px rgb(212, 60, 212);
     
     background-color: rgba(243, 237, 148, 0.8);
-    margin:1em 2em;
-    padding: 1em 0em 0em 1em; 
+    /* margin:1em 2em;
+    padding: 1em 0em 0em 1em;  */
 }
 
 #searchBtn{
