@@ -3,23 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dog Finder App</title>
     <!-- CDN for Compressed Foundation Framework CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-details.css">
     <!-- CDN for Minified jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- CDN for Compressed Foundation JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-
-<header>
-  
-
-</header>
-
 <body>
+ <!-- <header>
+      Sub Navigation -->
+      
+      <div class="top-bar">
+  <img src=".\assets\Logo\Logo2.png" alt="Dog Finder Logo">        
+        <div class="top-bar-left">
+        </div>
+      </div>
+ </header>
     
-</body>
-</html>
+      <!-- PLACEHOLDER SITE TEXT (E.G EXPLAIN PURPOSE, HOW TO USE SITE, ETC.  -->
+      <!-- <div class="grid-x grid-margin-x">
+        <div class= "small-1 medium-3 large-6 cell" id = "Lorem1">
+         <h7>Sit amet consectetur adipisicing elit. Eligendi dolorum unde rem, animi esse dolores temporibus totam quia.</h7>
+        </div>
+        <div class="small-1 medium-3 large-6 cell"medium-4 cell" id = "Lorem2">
+          <h7>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h7>
+        </div>
+      </div> -->
+      <!-- RESPONSIVE MENU TOGGLE - "SEARCH OPTIONS" - -->
+    
+      <!-- <br> -->
+    
+      <!-- <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Seach Options</div>
+      </div>
+    
+      <div class="grid-container" id="main-menu">
+        <form data-abide novalidate>
+          <div data-abide-error class="alert callout" style="display: none;">
+            <p><i class="fi-alert"></i> There are some errors in your form.</p>
+          </div> -->
+          
+      <!-- <div class="grid-container-fluid"> -->
+
+    
+    <!-- DOG PHOTO AND TEXT PLACEHOLDER  -->
+    <div class="container">
+      <div class="grid-x grid-margin-x">
+        <div class="small-4 medium-4 large-4 cell">
+        <div class="dogContainer">
+            <img id= "dogDtlImg" alt="image for dog" >
+              <div class="small-9 medium-6 large-6 cell" id="dogDescription">
+            <label>Input Label
+              <input type="text" >
+             </label>
+            </div>
+        </div>
+          <div class="shelterContainer">
+              <div class="grid-x grid-margin-x">
+            <div class="small-4 medium-4 large-4 cell">
+              <img id= "mapImg" alt="Shelter Location">
+        </div>    
+       </div>
+</div>
+</div>
+    <footer>
+   
+    
+    </footer>
+    
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+        <script>
+          $(document).foundation();
+        </script>
+    <!-- SAMPLE JSCRIPT ENTRIES TO TEST JQUERY DOM MANIPULATION   -->
+    <!-- COMMENT OUT WHEN LINKING TO PROJECT SCRIPT.JS -->
+        <script>
+          $("#dogDtlImg").attr("src","https://placehold.it/250x250&text=Dog Image");
+          $("#dogDescription").text("Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis quos neque in laudantium consequatur magni unde. Non illo cum excepturi, ut voluptatem facilis sed in ducimus quo suscipit deserunt et.");
+          $("#mapImg").attr("src","https://placehold.it/250x250&text=Shelter Map");
+        </script>
+    
+    </body>
+    </html>

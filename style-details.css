@@ -1,0 +1,85 @@
+/* BACKGROUND IMAGE */
+body {
+    background: url(./assets/images/DetailsPageImage.jpg) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgba(0,0,255,.5)
+  }
+.top-bar{
+    background-color: rgba(75,0,130, 0.5);
+
+}
+
+.side-bar{
+    width:20%;
+    /* border: dashed 2px green; */
+    background-color: rgb(194, 194, 194);
+    /* opacity: 20%; */
+}
+#Lorem1{
+    font-size:36px;
+    font-weight:bold;
+    border: dashed 1px green;
+   
+}
+
+#Lorem2{
+    border: dashed 1px blue;
+    font-size:36px;
+    font-weight:bold;
+    border: dashed 1px blue;
+    ;
+}
+.container{
+    border: dashed 1px rgb(246, 105, 11);
+    
+    background-color: rgba(235, 238, 243, 0.8);
+    /* margin:1em 2em;
+    padding: 1em 0em 0em 1em;  */
+}
+.dogContainer{
+    border: dashed 1px rgb(160, 214, 73);
+    
+    background-color: rgba(151, 187, 243, 0.8);
+    /* margin:1em 2em;
+    padding: 1em 0em 0em 1em;  */
+}
+.shelterContainer{
+    border: dashed 1px rgb(212, 60, 212);
+    
+    background-color: rgba(243, 237, 148, 0.8);
+    /* margin:1em 2em;
+    padding: 1em 0em 0em 1em;  */
+}
+
+#searchBtn{
+    background-color: rgb(25, 28, 218);
+    width:140px;
+    border: solid 4px whitesmoke;
+    border-radius: 25px;
+}
+
+#resetBtn{
+    color:black;
+    background-color: orange;
+    border-radius: 25px;
+}
+
+#searchBtn{
+    margin:1em 5em;
+} 
+#resetBtn{
+    margin:1em 1em;
+} 
+#dogDtlImg{
+    margin: 3em 3em;
+
+}
+#dogDescription{
+    color:black;
+    font-size: medium;
+    margin:0em 4em;
+    border: dashed green 2px;
+}
