@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <header class ="bg-light text-center mb-4 p-3">
+        <h1>FindaPet</h1>
+    </header>
+    <div class="container">
+        <form id="pet-form">
+            <div class="form-group">
+                
+                <input type="text" id="zip" class="form-control form-control-lg" placeholder="Enter Your Zip Code">
+                <input id= "submit" type="submit" value="Find" class= "btn btn-dark btn-lg btn-block mt-3">
+            </div>
+        </form>
+        <legend>Male / Female</legend>
+                <input id="checkboxMale" type="checkbox"><label for="checkbox1">Male</label>
+                <input id="checkboxFemale" type="checkbox"><label for="checkbox2">Female</label>
+        <div id="dogCard">
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
