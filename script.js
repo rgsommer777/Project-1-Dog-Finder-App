@@ -14,9 +14,11 @@ let retryCount = 0;
 //fetch animals from API
 //before we call fetchAnimals, build a "paramsObject" based on some user input and pass it to the function
 function fetchAnimals(){
-    document.getElementById("dogCard").innerHTML = "";
+    document.getElementById("dogListItem").innerHTML = "";
+    var chkbox = $("#checkboxMale");
+    console.log(chkbox);
     var male = $("#checkboxMale")[0].checked;
-    //console.log(male);
+    console.log(male);
     var female = $("#checkboxFemale")[0].checked;
     if (male && female) {
         gender= ""
@@ -28,6 +30,7 @@ function fetchAnimals(){
 
     //console.log(female);
     let zip = $("#zip").val();
+    console.log(zip);
     // use values from our paramsObject to construct our query URL
     //&gender=${gender}
     let queryURL = `https://api.petfinder.com/v2/animals?type=dog&location=${zip}${gender}`;
@@ -49,21 +52,39 @@ function fetchAnimals(){
         }
         var description = data.animals[i].description;
         var name = data.animals[i].name;
-        var divID = 100+i;
+        var dogID = data.animals[i].id;
 
-        var createDiv = `<div class="row" id=${divID}>
-        <div>
-          <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
-        </div>
-        <div>
-          <h5>${name}</h5>
-          <p>${description}</p>
-          <hr>
+        // var createDiv = `<div class="row" id=${dogID}>
+        // <div>
+        //   <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
+        // </div>
+        // <div>
+        //   <h5>${name}</h5>
+        //   <p>${description}</p>
+        //   <hr>
             
-        </div>
+        // </div>
+        // </div>`
+
+        
+        var createDiv = `<div class="small-2 medium-2 large-12 cell">
+        <h5><a class= "pet-detail" data-id =${dogID}>${name}</a></h5>
+            <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
+          </div>
+          <div class="medium-10 cell">
+            
+        
+            <p>${description}</p>
+          </div>
         </div>`
+
+
+
+
+
+
         console.log(createDiv);
-        document.getElementById("dogCard").innerHTML += createDiv;
+        document.getElementById("dogListItem").innerHTML += createDiv;
         }
     })
     .catch(function(err) {
@@ -113,10 +134,17 @@ function refreshTokens() {
 }
 
 
-$("#submit").on("click", function(e) {
+$("#searchBtn").on("click", function(e) {
     e.preventDefault();
     fetchAnimals();
 })
 //fetchAnimals();
 
 
+$(".pet-detail").on("click", function() {
+    //the button I just clicked has a data-attribute called "data-id"
+    var id = $(this).attr("data-id");
+
+    //change to the detail page (details.html)
+    window.location.href = `/details.html?id=${id}`;
+})
