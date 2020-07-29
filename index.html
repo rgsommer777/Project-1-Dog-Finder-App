@@ -18,50 +18,33 @@
 <body>
 
 
- <!-- <header>
-      Sub Navigation -->
-      
+  <header>    
       <div class="top-bar">
   <img src=".\assets\Logo\Logo2.png" alt="Dog Finder Logo">        
         <div class="top-bar-left">
         </div>
       </div>
- </header>
-    
-      <!-- PLACEHOLDER SITE TEXT (E.G EXPLAIN PURPOSE, HOW TO USE SITE, ETC.  -->
-      <!-- <div class="grid-x grid-margin-x">
-        <div class= "small-1 medium-3 large-6 cell" id = "Lorem1">
-         <h7>Sit amet consectetur adipisicing elit. Eligendi dolorum unde rem, animi esse dolores temporibus totam quia.</h7>
-        </div>
-        <div class="small-1 medium-3 large-6 cell"medium-4 cell" id = "Lorem2">
-          <h7>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h7>
-        </div>
-      </div> -->
-      <!-- RESPONSIVE MENU TOGGLE - "SEARCH OPTIONS" - -->
-    
-      <!-- <br> -->
-    
-      <div class="title-bar" data-responsive-toggle="search-options" data-hide-for="small">
+ <!-- RESPONSIVE MENU TOGGLE - "SEARCH OPTIONS" - -->
+ <!-- <div class="title-bar" data-responsive-toggle="search-options" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle></button>
         <div class="title-bar-title">Seach Options</div>
-      </div>
-      <form>   
-      <div class="grid-container" id="search-options">
-        <div class="grid-y">
-        <div class="small-12 medium-6 large-6 cell"></div>
+      
+  </div>    -->
+
+    </header> 
+    <form>     
+      <div class="grid-container">
+        <div class="grid-x">
+        <div class="small-12 medium-6 large-6 cell">
           <form data-abide novalidate>
           <div data-abide-error class="alert callout" style="display: none;">
             <p><i class="fi-alert"></i> There are some errors in your form.</p>
           </div>
         </div>
-      
-      <!-- <div class="grid-container-fluid"> -->
-       
-        
+   </div>
       <div class="grid-x grid-margin-x">
-            <!-- <div class="grid-x grid-margin-x"> -->
           <div class="small-8 medium-8 large-8 cell">
-            <label>Zip Code (Required)
+            <label><h6>Zip Code (Required)</h6>
               <input type="text" id="zip" class="form-control form-control-lg" placeholder="Enter Your Zip Code">
               <!-- <input type="text" id = "zip" placeholder="" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="number"> -->
               <span class="form-error">
@@ -73,57 +56,57 @@
 
       <fieldset class="small-12 medium-6 large-8 cell"></fieldset><!-- <div class="medium-4 cell"> -->
        
-            <legend>Male / Female</legend>
-              <input id="checkboxMale" type="checkbox"><label for="checkbox1">Male</label>
-              <input id="checkboxFemale" type="checkbox"><label for="checkbox2">Female</label>
+            <legend><h6>Male / Female</h6></legend>
+              <input id="checkboxMale" type="checkbox"><label for="checkbox1"><h7>Male</h7></label>
+              <input id="checkboxFemale" type="checkbox"><label for="checkbox2"><h7>Female</h7></label>
             
      
       <fieldset class="large-12 cell" id=sizeSelector>
-        <legend>Size</legend>
-        <input type="radio" name="size" value="small" id= "smDog" required><label for="smDog">Small</label>
-        <input type="radio" name="size" value="medium" id="medDog"><label for="medDog">Medium</label>
-        <input type="radio" name="size" value="large" id="lgDog"><label for="lgDog">Large</label>
+        <legend><h6>Size</h6></legend>
+          <input checked="checked" id="smDog" type="radio" name="size" value="smDog" />
+          <label class="select-sz smDog" for="smDog"></label>
+          <input id="medDog" type="radio" name="size" value="medDog" />
+          <label class="select-sz medDog"for="medDog"></label>
+          <input id="lgDog" type="radio" name="size" value="lgDog" />
+          <label class="select-sz lgDog"for="lgDog"></label>
       </fieldset>        
       
       <fieldset class="large-12 cell" id=ageSelector>
-        <legend>Age</legend>
-        <input type="radio" name="age" value="baby" id= "puppy" required><label for="puppy">Puppy</label>
-        <input type="radio" name="age" value="young" id="young"><label for="medium">Young</label>
-        <input type="radio" name="age" value="adult" id="adult"><label for="large">Adult</label>
-        <input type="radio" name="age" value="senior" id="senior"><label for="senior">Senior</label>
+        <legend><h6>Age</h6></legend>
+        <input type="radio" name="age" value="baby" id= "puppy" required><label for="puppy"><h7>Puppy</h7></label>
+        <input type="radio" name="age" value="young" id="young"><label for="medium"><h7>Young</h7></label>
+        <input type="radio" name="age" value="adult" id="adult"><label for="large"><h7>Adult</h7></label>
+        <input type="radio" name="age" value="senior" id="senior"><label for="senior"><h7>Senior</h7></label>
       </fieldset>        
             
             <div>
               <button class="button" id="searchBtn" type="submit" value="Submit">Search</button>
             </div>
-              <button class="button" id="resetBtn" type="reset" value="Reset">Reset Form (for testing only)</button>
-            </div>
+              <!-- <button class="button" id="resetBtn" type="reset" value="Reset">Reset Form (for testing only)</button>
+            </div> -->
         </div>
-      
- </form>
- </div>  
-  <br>
+      </div>
+    </form>
+    </div>
+  
+    <br>
     <!-- INDIVIDUAL DOG INFO ROW INCLUDING IMAGE AND HEADLINE  -->
-        <div id="dogListItem" class="grid-x grid-margin-x">
-          <div class="small-2 medium-2 large-12 cell">
-            <p><img id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
-          </div>
+    <div class = "dogItemContainer" class="grid-x grid-margin-x">  
+    <!-- <div class="small-2 medium-6 large-6 cell"> -->
+      <div id="dogListItem">
+          
+            <!-- <p><img id= "dogImage" alt="image for dog #1" alt="article preview image"></p> -->
+          
           <div class="medium-10 cell">
             <h5><a id="dogHeadline"></a></h5>
             </p>
             <!-- <p><a href ="#dogInfo"></a>Dog additional Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p> -->
           </div>
         </div>
-    <!-- POSSIBLE PAGINATION FEATURE -->
-        <!-- <ul class="pagination" role="navigation" aria-label="Pagination">
-          <li class="disabled">Previous <span class="show-for-sr">page</span></li>
-          <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-          <li><a href="#" aria-label="Page 2">2</a></li>
-          <li><a href="#" aria-label="Page 3">3</a></li>
-          <li><a href="#" aria-label="Page 4">4</a></li>
-          <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
-        </ul> -->
-
+      </div>
+    </div> 
+  </div>
+    
     <footer>
       
    
@@ -135,14 +118,10 @@
         <script>
           $(document).foundation();
         </script>
-    <!-- SAMPLE JSCRIPT ENTRIES TO TEST JQUERY DOM MANIPULATION   -->
-    <!-- COMMENT OUT WHEN LINKING TO PROJECT SCRIPT.JS -->
+    
         <script>
-          $("#dogImage").attr("src","https://placehold.it/80x80&text=Dog Pic");
-          $("#dogHeadline").text("Dog headline text (e.g. Name, other high level info)");
-          $("#zipCode").attr("placeholder","ex: 30000");
-        
-          
+          $(".dogItemContainer").hide();
+             
 
         </script>
         <script src="script.js"></script>

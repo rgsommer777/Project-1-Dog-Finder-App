@@ -56,7 +56,7 @@ function fetchAnimals(){
 
         
 
-        
+        $(".dogItemContainer").show();
         var createDiv = `<div class="small-2 medium-2 large-12 cell">
         <h5><a href = "details.html?id=${dogID}" target="blank" class= "pet-detail" data-id =${dogID}>${name}</a></h5>
             <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
@@ -64,10 +64,11 @@ function fetchAnimals(){
           <div class="medium-10 cell">
             
         
-            <p>${description}</p>
+            ${description}
           </div>
-        </div>`
-
+        </div>
+        <hr>`
+        
 
 
 
