@@ -54,21 +54,11 @@ function fetchAnimals(){
         var name = data.animals[i].name;
         var dogID = data.animals[i].id;
 
-        // var createDiv = `<div class="row" id=${dogID}>
-        // <div>
-        //   <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
-        // </div>
-        // <div>
-        //   <h5>${name}</h5>
-        //   <p>${description}</p>
-        //   <hr>
-            
-        // </div>
-        // </div>`
+        
 
         
         var createDiv = `<div class="small-2 medium-2 large-12 cell">
-        <h5><a class= "pet-detail" data-id =${dogID}>${name}</a></h5>
+        <h5><a href = "details.html?id=${dogID}" target="blank" class= "pet-detail" data-id =${dogID}>${name}</a></h5>
             <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
           </div>
           <div class="medium-10 cell">
@@ -141,10 +131,10 @@ $("#searchBtn").on("click", function(e) {
 //fetchAnimals();
 
 
-$(".pet-detail").on("click", function() {
-    //the button I just clicked has a data-attribute called "data-id"
-    var id = $(this).attr("data-id");
+// $(".pet-detail").on("click", function() {
+//     //the button I just clicked has a data-attribute called "data-id"
+//     var id = $(this).attr("data-id");
 
-    //change to the detail page (details.html)
-    window.location.href = `/details.html?id=${id}`;
-})
+//     //change to the detail page (details.html)
+//     window.location.href = `/details.html?id=${id}`;
+// })
