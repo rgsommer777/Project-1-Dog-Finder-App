@@ -54,17 +54,7 @@ function fetchAnimals(){
         var name = data.animals[i].name;
         var dogID = data.animals[i].id;
 
-        // var createDiv = `<div class="row" id=${dogID}>
-        // <div>
-        //   <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
-        // </div>
-        // <div>
-        //   <h5>${name}</h5>
-        //   <p>${description}</p>
-        //   <hr>
-            
-        // </div>
-        // </div>`
+        
 
         
         var createDiv = `<div class="small-2 medium-2 large-12 cell">
