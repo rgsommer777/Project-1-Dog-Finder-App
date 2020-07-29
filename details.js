@@ -1,5 +1,3 @@
-//fetchAnimals.preventDefault();
-
 const petForm = document.querySelector("#pet-form");
 
 //$("#pet-form").click(fetchAnimals());
@@ -14,26 +12,11 @@ let retryCount = 0;
 //fetch animals from API
 //before we call fetchAnimals, build a "paramsObject" based on some user input and pass it to the function
 function fetchAnimals(){
-    document.getElementById("dogListItem").innerHTML = "";
-    var chkbox = $("#checkboxMale");
-    console.log(chkbox);
-    var male = $("#checkboxMale")[0].checked;
-    console.log(male);
-    var female = $("#checkboxFemale")[0].checked;
-    if (male && female) {
-        gender= ""
-    } else if (male && !female) {
-        gender = "&gender=male"
-    } else {
-        gender= "&gender=female"
-    }
 
-    //console.log(female);
-    let zip = $("#zip").val();
-    console.log(zip);
-    // use values from our paramsObject to construct our query URL
-    //&gender=${gender}
-    let queryURL = `https://api.petfinder.com/v2/animals?type=dog&location=${zip}${gender}`;
+    var urlID = window.location.search;
+    var id = urlID.slice(4);
+    console.log(id);
+    var queryURL = `https://api.petfinder.com/v2/animals/${id}`;
     const headers = {"Authorization" : `Bearer ${token}` }
     $.ajax({
         dataType: "json",
@@ -44,38 +27,31 @@ function fetchAnimals(){
     
     .then(function(data) {
         console.log(data);
-        for (var i = 0; i<data.animals.length; i++){
-        if(data.animals[i].photos.length == 0){
+        document.getElementById("dogContainer").innerHTML = "";
+        if(data.animal.photos.length == 0){
             var img = "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/48594282/1/?bust=1595698821&width=100"
         } else {
-            var img = data.animals[i].photos[0].small;
+            var img = data.animal.photos[0].medium;
         }
-        var description = data.animals[i].description;
-        var name = data.animals[i].name;
-        var dogID = data.animals[i].id;
+        console.log(img);
+        var description = data.animal.description;
 
-        // var createDiv = `<div class="row" id=${dogID}>
-        // <div>
-        //   <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
-        // </div>
-        // <div>
-        //   <h5>${name}</h5>
-        //   <p>${description}</p>
-        //   <hr>
-            
-        // </div>
-        // </div>`
+        var name = data.animal.name;
 
         
-        var createDiv = `<div class="small-2 medium-2 large-12 cell">
-        <h5><a href = "details.html?id=${dogID}" target="blank" class= "pet-detail" data-id =${dogID}>${name}</a></h5>
-            <p><img src="${img}" id= "dogImage" alt="image for dog #1" alt="article preview image"></p>
-          </div>
-          <div class="medium-10 cell">
-            
+
+    
+
         
-            <p>${description}</p>
-          </div>
+        var createDiv = `<div class="grid-x grid-margin-x">
+            <div class="small-4 medium-6 large-6 cell">
+              <div class="dogContainer">
+                <h3><div id ="dogName">${name}</h3>
+                <img src="${img}" id= "dogDtlImg" alt="image for dog" >
+                  <div class="small-9 medium-6 large-6 cell" id="dogDescription">
+                  <p>${description}</p>
+              </div>
+            </div>
         </div>`
 
 
@@ -84,8 +60,8 @@ function fetchAnimals(){
 
 
         console.log(createDiv);
-        document.getElementById("dogListItem").innerHTML += createDiv;
-        }
+        document.getElementById("dogContainer").innerHTML = createDiv;
+        
     })
     .catch(function(err) {
         // console.log(err.status);
@@ -132,19 +108,9 @@ function refreshTokens() {
     })
     
 }
+fetchAnimals();
 
-
-$("#searchBtn").on("click", function(e) {
-    e.preventDefault();
-    fetchAnimals();
-})
-//fetchAnimals();
-
-
-// $(".pet-detail").on("click", function() {
-//     //the button I just clicked has a data-attribute called "data-id"
-//     var id = $(this).attr("data-id");
-
-//     //change to the detail page (details.html)
-//     window.location.href = `/details.html?id=${id}`;
-// })
+// var urlID = window.location.search;
+// var id = urlID.slice(4);
+// console.log(id);
+// var queryURL = `https://api.petfinder.com/v2/animals/${id}`;
