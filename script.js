@@ -11,14 +11,37 @@ let token = localStorage.getItem("petfinderToken") || "";
 
 let retryCount = 0;
 
+$(".smDog").on("click", function(){
+    var sizeBox = $("#smDog");
+    console.log(sizeBox);
+    if(this.checked == false){
+        this.checked = true;
+        this.disabled = false;
+        //console.log(this);
+        console.log(this.disabled);
+        console.log(this.checked);
+    } else {
+        this.checked = false;
+        this.disabled = true;
+        //console.log(this);
+        console.log(this.disabled);
+        console.log(this.checked);
+    }
+})
+
+
+
+
+
+
 //fetch animals from API
 //before we call fetchAnimals, build a "paramsObject" based on some user input and pass it to the function
 function fetchAnimals(){
     document.getElementById("dogListItem").innerHTML = "";
-    var chkbox = $("#checkboxMale");
-    console.log(chkbox);
+    //var chkbox = $("#checkboxMale");
+    //console.log(chkbox);
     var male = $("#checkboxMale")[0].checked;
-    console.log(male);
+    //console.log(male);
     var female = $("#checkboxFemale")[0].checked;
     if (male && female) {
         gender= ""
@@ -27,13 +50,56 @@ function fetchAnimals(){
     } else {
         gender= "&gender=female"
     }
+    //var sizeBox = $("#smDog");
+    //console.log(sizeBox);
+    var small = $("#smDog")[0].checked;
+    //console.log(small);
+    var medium = $("#medDog")[0].checked;
+    //console.log(medium);
+    var large = $("#lgDog")[0].checked;
+    //console.log(large);
+    
+
+     
+    
+    if (large) {
+        size = "&size=large";
+    } else if (medium) {
+        size = "&size=medium"
+    } else if (small) {
+        size = "&size=small"
+    } else {
+        size = "";
+    }
+    console.log(size);
+    var puppy = $("#puppy")[0].checked;
+    //console.log(puppy);
+    var young = $("#young")[0].checked;
+    //console.log(young);
+    var adult = $("#adult")[0].checked;
+    //console.log(adult);
+    var senior = $("#senior")[0].checked;
+    //console.log(senior);
+
+    if (senior) {
+        age = "&age=senior";
+    } else if (adult) {
+        age = "&age=adult"
+    } else if (young) {
+        age = "&age=adult"
+    } else if (puppy) {
+        age = "&age=puppy"
+    } else {
+        age = "";
+    } 
+
 
     //console.log(female);
     let zip = $("#zip").val();
-    console.log(zip);
+    //console.log(zip);
     // use values from our paramsObject to construct our query URL
     //&gender=${gender}
-    let queryURL = `https://api.petfinder.com/v2/animals?type=dog&location=${zip}${gender}`;
+    let queryURL = `https://api.petfinder.com/v2/animals?type=dog&location=${zip}${gender}${size}${age}`;
     const headers = {"Authorization" : `Bearer ${token}` }
     $.ajax({
         dataType: "json",
@@ -74,7 +140,7 @@ function fetchAnimals(){
 
 
 
-        console.log(createDiv);
+        //console.log(createDiv);
         document.getElementById("dogListItem").innerHTML += createDiv;
         }
     })
