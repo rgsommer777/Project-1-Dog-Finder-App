@@ -11,23 +11,23 @@ let token = localStorage.getItem("petfinderToken") || "";
 
 let retryCount = 0;
 
-$(".smDog").on("click", function(){
-    var sizeBox = $("#smDog");
-    console.log(sizeBox);
-    if(this.checked == false){
-        this.checked = true;
-        this.disabled = false;
-        //console.log(this);
-        console.log(this.disabled);
-        console.log(this.checked);
-    } else {
-        this.checked = false;
-        this.disabled = true;
-        //console.log(this);
-        console.log(this.disabled);
-        console.log(this.checked);
-    }
-})
+// $(".smDog").on("click", function(){
+//     var sizeBox = $("#smDog");
+//     console.log(sizeBox);
+//     if(this.checked == false){
+//         this.checked = true;
+//         this.disabled = false;
+//         //console.log(this);
+//         console.log(this.disabled);
+//         console.log(this.checked);
+//     } else {
+//         this.checked = false;
+//         this.disabled = true;
+//         //console.log(this);
+//         console.log(this.disabled);
+//         console.log(this.checked);
+//     }
+// })
 
 
 
@@ -71,24 +71,24 @@ function fetchAnimals(){
     } else {
         size = "";
     }
-    console.log(size);
+
     var puppy = $("#puppy")[0].checked;
-    //console.log(puppy);
+    console.log(puppy);
     var young = $("#young")[0].checked;
-    //console.log(young);
+    console.log(young);
     var adult = $("#adult")[0].checked;
-    //console.log(adult);
+    console.log(adult);
     var senior = $("#senior")[0].checked;
-    //console.log(senior);
+    console.log(senior);
 
     if (senior) {
         age = "&age=senior";
     } else if (adult) {
         age = "&age=adult"
     } else if (young) {
-        age = "&age=adult"
+        age = "&age=young"
     } else if (puppy) {
-        age = "&age=puppy"
+        age = "&age=baby"
     } else {
         age = "";
     } 
@@ -100,6 +100,7 @@ function fetchAnimals(){
     // use values from our paramsObject to construct our query URL
     //&gender=${gender}
     let queryURL = `https://api.petfinder.com/v2/animals?type=dog&location=${zip}${gender}${size}${age}`;
+    console.log(queryURL);
     const headers = {"Authorization" : `Bearer ${token}` }
     $.ajax({
         dataType: "json",

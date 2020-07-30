@@ -64,7 +64,6 @@ function fetchAnimals() {
 
       console.log(createDiv);
       document.getElementById("dogContainer").innerHTML = createDiv;
-
       var createEmail = `<h5>Email: ${email}</h5>`
       document.getElementById("contactEM").innerHTML = createEmail;
       var createPhone = `<h5>Phone: ${phone}</h5>`
