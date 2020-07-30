@@ -46,7 +46,9 @@ function fetchAnimals() {
       }
       console.log(img);
       var description = data.animal.description;
-
+      var email = data.animal.contact.email;
+      //console.log(email);
+      var phone = data.animal.contact.phone;
       var name = data.animal.name;
 
       var createDiv = `<div class="grid-x grid-margin-x">
@@ -62,6 +64,10 @@ function fetchAnimals() {
 
       console.log(createDiv);
       document.getElementById("dogContainer").innerHTML = createDiv;
+      var createEmail = `<h5>Email: ${email}</h5>`
+      document.getElementById("contactEM").innerHTML = createEmail;
+      var createPhone = `<h5>Phone: ${phone}</h5>`
+      document.getElementById("contactPh").innerHTML = createPhone;
 
       renderMap(data);
     })
