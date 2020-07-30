@@ -21,16 +21,20 @@ We chose two specific API's to call and integrate for the project:<br>
 Petfinder.com (https://www.petfinder.com/developers/) and mapquest.com (https://developer.mapquest.com/)<br>
 For the front end framework, we chose Foundation 6 by Zurb.<br>
 The approach is to use the landing page (index.html) to enter the search criteria including:<br>
-1. Zip Code>br>
+1. Zip Code<br>
 2. Dog Gender (M/F)<br>
 3. Dog Size (S/M/L)<br>
 4. Dog Age (baby,young,adult,senior)<br>
 <br>
 When the Search button is selected, the initial API call to petfinder.com is fired which is filtered by the criteria above. The initial list of dogs (20) is returned on the same page.<br>
-When an individual dog is selected from the list by clicking the dog name, the individual pet id is passed in the page transition to the next page (details.html)page and the petfinder API call is fired again, along with an API call to mapquest.com. The mapquest call uses the parsed address info from teh petfinder call to pinpoint the shelter address, allowing the map image to be pulled back from mapquest and displayed alongside the dog detail. 
+When an individual dog is selected from the list by clicking the dog name, the individual pet id is passed in the page transition to the next page (details.html)page and the petfinder API call is fired again, along with an API call to mapquest.com.<br>
+The mapquest call uses the parsed address info from the petfinder call to pinpoint the shelter address, allowing the map image to be pulled back from mapquest and displayed alongside the dog detail and shelter contact info. 
 
 ## Screenshots
-[We'll attach screen shots here]
+![](assets/screenshots/screenshot1.png)
+![](assets/screenshots/screenshot2.png)
+![](assets/screenshots/screenshot3.png)
+![](assets/screenshots/screenshot4.png)<br>
 
 ## Links
 Git Hub Repository: https://github.com/rgsommer777/Project-1-Dog-Finder-App <br>
