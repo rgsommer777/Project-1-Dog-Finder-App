@@ -16,9 +16,18 @@ An interactive application designed to allow users to search for adoptable dogs 
 **WHEN** I click on a particular dog, I am taken to the detail page
 **THEN** I see a larger picture of the dog I selected, along with specific details about that dog and a map showing the shelter where it is located
 
-
 ## Approach
-[We'll enter our approach and learnings here]
+We chose two specific API's to call and integrate for the project:<br>
+Petfinder.com (https://www.petfinder.com/developers/) and mapquest.com (https://developer.mapquest.com/)<br>
+For the front end framework, we chose Foundation 6 by Zurb.<br>
+The approach is to use the landing page (index.html) to enter the search criteria including:<br>
+1. Zip Code>br>
+2. Dog Gender (M/F)<br>
+3. Dog Size (S/M/L)<br>
+4. Dog Age (baby,young,adult,senior)<br>
+<br>
+When the Search button is selected, the initial API call to petfinder.com is fired which is filtered by the criteria above. The initial list of dogs (20) is returned on the same page.<br>
+When an individual dog is selected from the list by clicking the dog name, the individual pet id is passed in the page transition to the next page (details.html)page and the petfinder API call is fired again, along with an API call to mapquest.com. The mapquest call uses the parsed address info from teh petfinder call to pinpoint the shelter address, allowing the map image to be pulled back from mapquest and displayed alongside the dog detail. 
 
 ## Screenshots
 [We'll attach screen shots here]
